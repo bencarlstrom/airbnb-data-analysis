@@ -1,7 +1,10 @@
 listings.csv
 reviews.csv
+*.gz
 
 venv
+__pycache__
+*.pyc
 .env
 .idea/
 .DS_Store
