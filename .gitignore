@@ -1,5 +1,7 @@
 listings.csv
 reviews.csv
 
+venv
+.env
 .idea/
 .DS_Store
