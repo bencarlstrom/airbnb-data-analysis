@@ -1,0 +1,39 @@
+database:
+  name: airbnb
+
+schemas:
+  - raw
+  - staging
+  - clean
+
+data:
+    - name: listings
+      url: https://data.insideairbnb.com/mexico/df/mexico-city/2025-09-27/data/listings.csv.gz
+      path: data/listings.csv
+    - name: reviews
+      url: https://data.insideairbnb.com/mexico/df/mexico-city/2025-09-27/data/reviews.csv.gz
+      path: data/reviews.csv
+
+pipeline:
+  steps:
+    - name: schemas
+      scripts:
+        - sql/00_setup/create_schemas.sql
+    - name: raw
+      scripts:
+        - sql/01_raw/create_raw_tables.sql
+        - sql/01_raw/load_raw_data.sql
+        - sql/01_raw/validate_raw_data.sql
+    - name: staging
+      scripts:
+        - sql/02_staging/create_staging_tables.sql
+        - sql/02_staging/load_staging_data.sql
+        - sql/02_staging/validate_staging_data.sql
+    - name: clean
+      scripts:
+        - sql/03_clean/create_clean_tables.sql
+        - sql/03_clean/load_clean_data.sql
+        - sql/03_clean/validate_clean_data.sql
+    - name: analysis
+      scripts:
+        - sql/04_analysis/business_questions.sql

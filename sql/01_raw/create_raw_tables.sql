@@ -45,7 +45,7 @@ CREATE TABLE raw.listings (
     , property_type text
     , room_type text
     , accommodates int
-    , bathrooms int
+    , bathrooms numeric
     , bathrooms_text text
     , bedrooms int
     , beds int
@@ -69,6 +69,10 @@ CREATE TABLE raw.listings (
     , number_of_reviews int
     , number_of_reviews_ltm int
     , number_of_reviews_l30d int
+    , availability_eoy int
+    , number_of_reviews_ly int
+    , estimated_occupancy_l365d int
+    , estimated_revenue_l365d int
     , first_review date
     , last_review date
     , review_scores_rating numeric
