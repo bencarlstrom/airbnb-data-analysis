@@ -21,10 +21,9 @@ The original data used in this project came from quarterly data published Decemb
    cp .env.example .env
 ```
 
-2. Start up Postgres and create the database
+2. Start up Postgres
 ```bash
     brew services start postgresql
-    psql -d postgres -c "CREATE DATABASE airbnb;"
 ```
 
 3. Run pipeline
