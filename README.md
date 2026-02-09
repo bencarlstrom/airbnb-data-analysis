@@ -4,6 +4,10 @@ This PostgreSQL pipeline cleans, validates, and normalizes Mexico City Airbnb li
 
 The original data used in this project came from quarterly data published December 2023. The CSVs in this repo contain only the first 100 rows of the actual data that was used. Data source: [Inside Airbnb](http://insideairbnb.com/).
 
+## Entity Relationship Diagram
+![Entity Relationship Diagram](docs/airbnb_erd.png)
+
+
 ## Instructions
 1. Clone repo and install dependencies
 ```bash
