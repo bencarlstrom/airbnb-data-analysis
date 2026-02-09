@@ -1,11 +1,3 @@
-database:
-  name: airbnb
-
-schemas:
-  - raw
-  - staging
-  - clean
-
 data:
     - name: listings
       url: https://data.insideairbnb.com/mexico/df/mexico-city/2025-09-27/data/listings.csv.gz
