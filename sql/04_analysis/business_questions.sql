@@ -73,7 +73,7 @@ WHERE l.price > 0
     AND l.price < 50000  -- Excludes extreme outliers (e.g. $104k USD per night private room)
     AND a.minimum_nights < 31
 ORDER BY monthly_revenue DESC;
-SELECT * FROM top_revenue_airbnbs;
+SELECT * FROM top_revenue_airbnbs LIMIT 10;
 
 
 -- 6. Which hosts generate the most potential monthly revenue?
@@ -92,7 +92,7 @@ WHERE l.price > 0
     AND a.minimum_nights < 31
 GROUP BY h.host_id, h.host_name, h.calculated_host_listings_count
 ORDER BY monthly_revenue DESC;
-SELECT * FROM host_monthly_revenue;
+SELECT * FROM host_monthly_revenue LIMIT 10;
 
 
 -- 7. Which ratings correlate most strongly with customer's value rating?
